@@ -8,17 +8,41 @@
 	let rightAnswer;
 	let userAnswer;
 	let validityAnswer;
+	let somTypeSymbol;
+
+	let newMultiplySom;
+	let newAddSom;
+	let newSubstractSom;
+
+	const somTypeFunctions = [
+		(newMultiplySom = () => {
+			somTypeSymbol = '×';
+			firstNumber = Math.floor(Math.random() * 5);
+			secondNumber = Math.floor(Math.random() * 5);
+			rightAnswer = firstNumber * secondNumber;
+		}),
+		(newAddSom = () => {
+			somTypeSymbol = '+';
+			firstNumber = Math.floor(Math.random() * 100);
+			secondNumber = Math.floor(Math.random() * 10);
+			rightAnswer = firstNumber + secondNumber;
+		}),
+		(newSubstractSom = () => {
+			somTypeSymbol = '-';
+			firstNumber = Math.floor(Math.random() * 20);
+			secondNumber = Math.floor(Math.random() * firstNumber); //Tweede nummer is altijd lager dan het eerste nummer om een negatieve uitkomst te voorkomen.
+			rightAnswer = firstNumber - secondNumber;
+		})
+	];
+
+	export const newSom = () => {
+		userAnswer = '';
+		somTypeFunctions[Math.floor(Math.random() * somTypeFunctions.length)]();
+	};
 
 	onMount(() => {
 		newSom();
 	});
-
-	export const newSom = () => {
-		userAnswer = '';
-		firstNumber = Math.floor(Math.random() * 100);
-		secondNumber = Math.floor(Math.random() * 10);
-		rightAnswer = firstNumber + secondNumber;
-	};
 
 	const checkAnswer = (event) => {
 		if (userAnswer) {
@@ -36,7 +60,7 @@
 
 <div class="grid grid-cols-auto grid-cols-5 gap-2 text-4xl">
 	<div>{firstNumber}</div>
-	<div>+</div>
+	<div>{somTypeSymbol}</div>
 	<div>{secondNumber}</div>
 	<div>=</div>
 	<div>
