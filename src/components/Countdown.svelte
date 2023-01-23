@@ -37,7 +37,7 @@
 <div>
 	<div>Nog</div>
 	<div
-		class="text-4xl p-3 font-semibold"
+		class="text-3xl p-3 font-semibold"
 		class:animate-flash={animate}
 		class:animate-fast={animate}
 		class:text-red-500={animate}

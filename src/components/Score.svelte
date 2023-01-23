@@ -4,5 +4,5 @@
 
 <div>
 	<div>Score</div>
-	<div class="text-4xl p-3 font-semibold">{totalScore}</div>
+	<div class="text-3xl p-3 font-semibold">{totalScore}</div>
 </div>
