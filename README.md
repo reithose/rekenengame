@@ -2,6 +2,8 @@
 
 Simpel rekenspelletje
 
+[spelen](https://rekengame.vercel.app/)
+
 ![screenshot](screenshot.png)
 
 ## Spelregels
