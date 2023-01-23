@@ -1,8 +1,8 @@
 <script>
 	import '../style.css';
 	import Game from '../components/Game.svelte';
-	import Countdown from '../components/Countdown.svelte';
 	import FancyTitleWithColors from '../components/FancyTitleWithColors.svelte';
+	import Footer from '../components/Footer.svelte';
 
 	let resetSom;
 </script>
@@ -17,6 +17,9 @@
 		</div>
 		<div class="mt-4 grid grid-cols-1 place-content-center">
 			<div class="md:w-1/2 mx-auto"><Game /></div>
+		</div>
+		<div class="mt-4 grid grid-cols-1 place-content-center">
+			<div class="md:w-1/2 mx-auto"><Footer /></div>
 		</div>
 	</div>
 </main>
