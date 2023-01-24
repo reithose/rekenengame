@@ -42,6 +42,7 @@
 		} else {
 			showWrong = true;
 			totalScore = 0;
+			newHighscore = false;
 			setTimeout(() => {
 				showWrong = false;
 			}, 2000);
